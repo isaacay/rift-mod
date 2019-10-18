@@ -165,9 +165,6 @@ class Rift(Cog):
             else:
                 notify = True
             self.open_rifts[rift] = {"notify": notify}
-            if notify:
-                
-                )
         await ctx.send(
             _(
                 "A rift has been opened to {}! Everything you say will be relayed there.\nResponses will be relayed here.\nType `exit` to quit."
