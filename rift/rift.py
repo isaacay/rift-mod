@@ -165,11 +165,6 @@ class Rift(Cog):
             else:
                 notify = True
             self.open_rifts[rift] = {"notify": notify}
-        await ctx.send(
-            _(
-                "A rift has been opened to {}! Everything you say will be relayed there.\nResponses will be relayed here.\nType `exit` to quit."
-            ).format(humanize_list([str(rift.destination) for rift in rifts]))
-        )
 
     @rift.command(name="search")
     async def rift_search(self, ctx, searchby: search_converter(_) = None, *, search=None):
